@@ -1,20 +1,51 @@
-import { ArrowLeft, Edit3, RotateCcw, X } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Edit3, RotateCcw, X } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Project } from "../types";
 import { useCardTilt } from "../hooks/useCardTilt";
 import { MarkdownContent } from "./MarkdownContent";
 
 type ProjectModalProps = {
   project?: Project;
+  projects: Project[];
   isLoading: boolean;
   isAdmin: boolean;
   onClose: () => void;
+  onNavigateProject: (slug: string) => void;
 };
 
-export function ProjectModal({ project, isLoading, isAdmin, onClose }: ProjectModalProps) {
+export function ProjectModal({ project, projects, isLoading, isAdmin, onClose, onNavigateProject }: ProjectModalProps) {
   const [isBack, setIsBack] = useState(false);
   const tilt = useCardTilt(12);
+  const currentIndex = useMemo(
+    () => (project ? projects.findIndex((item) => item.slug === project.slug) : -1),
+    [project, projects]
+  );
+  const total = projects.length;
+  const canPage = total > 1 && currentIndex >= 0;
+  const previousProject = canPage ? projects[(currentIndex - 1 + total) % total] : undefined;
+  const nextProject = canPage ? projects[(currentIndex + 1) % total] : undefined;
+
+  useEffect(() => {
+    setIsBack(false);
+  }, [project?.slug]);
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (!canPage) {
+        return;
+      }
+      if (event.key === "ArrowLeft" && previousProject) {
+        onNavigateProject(previousProject.slug);
+      }
+      if (event.key === "ArrowRight" && nextProject) {
+        onNavigateProject(nextProject.slug);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [canPage, nextProject, onNavigateProject, previousProject]);
 
   if (isLoading) {
     return (
@@ -48,6 +79,27 @@ export function ProjectModal({ project, isLoading, isAdmin, onClose }: ProjectMo
         </Link>
       )}
 
+      {previousProject && (
+        <button
+          className="modal-page-button modal-page-prev"
+          type="button"
+          aria-label="上一个作品"
+          onClick={() => onNavigateProject(previousProject.slug)}
+        >
+          <ChevronLeft size={30} />
+        </button>
+      )}
+      {nextProject && (
+        <button
+          className="modal-page-button modal-page-next"
+          type="button"
+          aria-label="下一个作品"
+          onClick={() => onNavigateProject(nextProject.slug)}
+        >
+          <ChevronRight size={30} />
+        </button>
+      )}
+
       <article
         className={`postcard-stage ${tilt.isActive ? "is-active" : ""}`}
         style={tilt.style}
@@ -65,7 +117,7 @@ export function ProjectModal({ project, isLoading, isAdmin, onClose }: ProjectMo
                 <h1>{project.title}</h1>
                 <p>{project.subtitle}</p>
               </div>
-              <div className="postcard-signature">
+              <div className="postcard-signature" aria-label="作品信息">
                 <span>{project.role}</span>
                 <small>{project.tags.join(" · ")}</small>
               </div>
@@ -84,16 +136,21 @@ export function ProjectModal({ project, isLoading, isAdmin, onClose }: ProjectMo
             </div>
             <MarkdownContent markdown={project.markdown} />
           </section>
+          <button
+            className="postcard-flip"
+            type="button"
+            aria-label={isBack ? "翻到正面" : "翻到背面"}
+            onClick={() => setIsBack((value) => !value)}
+          >
+            <RotateCcw size={24} />
+          </button>
         </div>
-        <button
-          className="postcard-flip"
-          type="button"
-          aria-label={isBack ? "翻到正面" : "翻到背面"}
-          onClick={() => setIsBack((value) => !value)}
-        >
-          <RotateCcw size={24} />
-        </button>
       </article>
+      {currentIndex >= 0 && (
+        <div className="postcard-progress" aria-label="作品目录进度">
+          {String(currentIndex + 1).padStart(2, "0")} / {String(total).padStart(2, "0")}
+        </div>
+      )}
     </div>
   );
 }

@@ -33,14 +33,10 @@ export function GalleryPage({ projectsState, sessionState, onOpenProject, overla
   return (
     <main className="app-shell">
       <header className="gallery-toolbar" aria-label="作品集工具栏">
-        <div className="window-dots" aria-hidden="true">
-          <span />
-          <span />
-          <span />
-        </div>
         <div className="toolbar-title">
+          <small>PROJECT ARCHIVE</small>
           <span>{SITE_TITLE}</span>
-          <small>作品卡册</small>
+          <em>作品卡册</em>
         </div>
 
         <div className="toolbar-actions toolbar-actions-left">

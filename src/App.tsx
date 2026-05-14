@@ -30,6 +30,7 @@ export function App() {
             projectsState={projectsState}
             sessionState={sessionState}
             onClose={() => navigate("/")}
+            onNavigateProject={(nextSlug) => navigate(`/project/${nextSlug}`)}
           />
         }
       />
@@ -45,11 +46,13 @@ export function App() {
 function ProjectRoute({
   projectsState,
   sessionState,
-  onClose
+  onClose,
+  onNavigateProject
 }: {
   projectsState: ReturnType<typeof useProjects>;
   sessionState: ReturnType<typeof useSession>;
   onClose: () => void;
+  onNavigateProject: (slug: string) => void;
 }) {
   const { slug } = useParams();
   const project = projectsState.projects.find((item) => item.slug === slug);
@@ -62,9 +65,11 @@ function ProjectRoute({
       overlay={
         <ProjectModal
           project={project}
+          projects={projectsState.projects}
           isLoading={projectsState.status === "loading"}
           isAdmin={Boolean(sessionState.session?.isAdmin)}
           onClose={onClose}
+          onNavigateProject={onNavigateProject}
         />
       }
     />
