@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-label="Markdown content system hero">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#151b24"/>
+      <stop offset=".5" stop-color="#2d3340"/>
+      <stop offset="1" stop-color="#665069"/>
+    </linearGradient>
+    <linearGradient id="note" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f9fbff"/>
+      <stop offset="1" stop-color="#dfe7ef"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <ellipse cx="720" cy="450" rx="560" ry="240" fill="none" stroke="#7bdff2" stroke-width="5" opacity=".45"/>
+  <ellipse cx="720" cy="450" rx="420" ry="170" fill="none" stroke="#f7c8e0" stroke-width="5" opacity=".5" transform="rotate(-18 720 450)"/>
+  <rect x="468" y="142" width="504" height="598" rx="22" fill="url(#note)" stroke="#ffffff" stroke-width="6"/>
+  <path d="M540 278h360M540 360h284M540 442h336M540 524h230" stroke="#3d4957" stroke-width="22" stroke-linecap="round"/>
+  <circle cx="952" cy="248" r="66" fill="#78dbe9"/>
+  <circle cx="330" cy="560" r="34" fill="#f7c8e0"/>
+  <circle cx="1130" cy="520" r="24" fill="#fff"/>
+</svg>

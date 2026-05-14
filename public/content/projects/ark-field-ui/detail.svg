@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-label="UI detail panels">
+  <rect width="1000" height="520" fill="#eef6f8"/>
+  <rect x="66" y="66" width="868" height="388" rx="8" fill="#fff" stroke="#b8c7ce" stroke-width="4"/>
+  <path d="M100 350h800" stroke="#d9e1e5" stroke-width="3"/>
+  <path d="M142 112h360v196H142z" fill="#d8f7ff" stroke="#88c8d8" stroke-width="4"/>
+  <path d="M550 126h302M550 174h220M550 222h260M550 270h180" stroke="#96aab4" stroke-width="18" stroke-linecap="round"/>
+  <path d="M148 398h250M148 426h160" stroke="#222b33" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="822" cy="405" r="34" fill="#1d252d"/>
+  <path d="M806 405h32M826 389l16 16-16 16" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

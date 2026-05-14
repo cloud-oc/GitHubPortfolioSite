@@ -1,0 +1,53 @@
+[
+  {
+    "id": "project-ark-field",
+    "slug": "ark-field-ui",
+    "title": "终末地潜能卡片",
+    "subtitle": "角色资料式作品展示",
+    "role": "UI / Interaction",
+    "year": "2026",
+    "category": "界面设计",
+    "tags": ["3D Card", "Markdown", "Portfolio"],
+    "coverImage": "./content/projects/ark-field-ui/cover.svg",
+    "heroImage": "./content/projects/ark-field-ui/hero.svg",
+    "summary": "一个用于展示角色、项目或视觉作品的互动明信片。",
+    "markdown": "## 项目说明\n\n这张卡片用于展示一个完整项目的背景、设计目标和成果。背面支持 **Markdown**，可以插入段落、列表、链接和图片。\n\n![界面细节](./content/projects/ark-field-ui/detail.svg)\n\n### 适合展示\n\n- 游戏 UI、角色设定、视觉设计\n- 前端 Demo 或创意实验\n- 需要图文并重介绍的项目\n\n> 管理员登录后可以从右上角加号新增作品，并把图片和数据提交到 GitHub 仓库。",
+    "gallery": ["./content/projects/ark-field-ui/detail.svg"],
+    "createdAt": "2026-05-14T00:00:00.000Z",
+    "updatedAt": "2026-05-14T00:00:00.000Z"
+  },
+  {
+    "id": "project-nocturne-grid",
+    "slug": "nocturne-grid",
+    "title": "录像及截图式网格",
+    "subtitle": "Steam 风格图库首页",
+    "role": "Frontend",
+    "year": "2026",
+    "category": "前端开发",
+    "tags": ["Gallery", "Responsive", "Template"],
+    "coverImage": "./content/projects/nocturne-grid/cover.svg",
+    "heroImage": "./content/projects/nocturne-grid/hero.svg",
+    "summary": "深色工具栏、紧凑网格和作品筛选组成的作品集入口。",
+    "markdown": "## 设计目标\n\n首页参考截图管理器的密集网格：作品图是主角，文字信息退到卡片详情中。\n\n![网格草图](./content/projects/nocturne-grid/detail.svg)\n\n### 实现要点\n\n- 响应式 CSS grid\n- 分类与标签筛选\n- 登录后显示管理动作\n- GitHub Pages 友好的 HashRouter",
+    "gallery": ["./content/projects/nocturne-grid/detail.svg"],
+    "createdAt": "2026-05-14T00:00:00.000Z",
+    "updatedAt": "2026-05-14T00:00:00.000Z"
+  },
+  {
+    "id": "project-orbit-notes",
+    "slug": "orbit-notes",
+    "title": "轨道笔记",
+    "subtitle": "Markdown 作品背面",
+    "role": "Content System",
+    "year": "2026",
+    "category": "内容系统",
+    "tags": ["CMS", "GitHub", "OAuth"],
+    "coverImage": "./content/projects/orbit-notes/cover.svg",
+    "heroImage": "./content/projects/orbit-notes/hero.svg",
+    "summary": "用仓库内容作为数据源，保留静态站的简单部署体验。",
+    "markdown": "## 内容方式\n\n每个作品是一段结构化 JSON 加一组图片资源。管理员保存后，Worker 把变更作为一次 commit 写回仓库。\n\n![提交流程](./content/projects/orbit-notes/detail.svg)\n\n### 数据包含\n\n| 字段 | 用途 |\n| --- | --- |\n| title | 明信片标题 |\n| heroImage | 正面主图 |\n| markdown | 背面正文 |\n| gallery | Markdown 可引用图片 |",
+    "gallery": ["./content/projects/orbit-notes/detail.svg"],
+    "createdAt": "2026-05-14T00:00:00.000Z",
+    "updatedAt": "2026-05-14T00:00:00.000Z"
+  }
+]

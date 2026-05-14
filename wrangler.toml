@@ -1,0 +1,8 @@
+name = "github-portfolio-postcards-api"
+main = "worker/src/index.ts"
+compatibility_date = "2024-12-01"
+
+[vars]
+REPO_OWNER = "cloud-oc"
+REPO_NAME = "GitHubPortfolioSite"
+REPO_BRANCH = "main"

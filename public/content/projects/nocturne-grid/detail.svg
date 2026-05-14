@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-label="Steam style grid sketch">
+  <rect width="1000" height="520" fill="#1b2028"/>
+  <rect y="0" width="1000" height="92" fill="#202630"/>
+  <rect x="34" y="118" width="282" height="158" fill="#05070a"/>
+  <rect x="356" y="118" width="282" height="158" fill="#05070a"/>
+  <rect x="678" y="118" width="282" height="158" fill="#05070a"/>
+  <rect x="34" y="304" width="282" height="158" fill="#05070a"/>
+  <rect x="356" y="304" width="282" height="158" fill="#05070a"/>
+  <rect x="678" y="304" width="282" height="158" fill="#05070a"/>
+  <g fill="#36404d">
+    <rect x="54" y="24" width="54" height="44" rx="5"/>
+    <rect x="124" y="24" width="54" height="44" rx="5"/>
+    <rect x="800" y="24" width="54" height="44" rx="5"/>
+    <rect x="870" y="24" width="92" height="44" rx="5"/>
+  </g>
+  <path d="M82 140h186v114H82zM404 140h186v114H404zM726 140h186v114H726zM82 326h186v114H82zM404 326h186v114H404zM726 326h186v114H726z" fill="#7edaf0" opacity=".7"/>
+</svg>

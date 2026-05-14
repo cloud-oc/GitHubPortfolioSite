@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" role="img" aria-label="Large postcard hero art">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset=".55" stop-color="#e8f8fd"/>
+      <stop offset="1" stop-color="#9dd5e3"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" x2="1">
+      <stop offset="0" stop-color="#dff9ff"/>
+      <stop offset=".48" stop-color="#6bd5ef"/>
+      <stop offset="1" stop-color="#1b5973"/>
+    </linearGradient>
+  </defs>
+  <rect width="1440" height="900" fill="url(#bg)"/>
+  <path d="M101 745c262-354 578-510 947-468 139 16 252-28 339-131v754H101z" fill="#fff" opacity=".58"/>
+  <path d="M762 96c-165 112-276 253-334 424l158 171 303-72 122-304z" fill="#f7f9fb" stroke="#b9c4ca" stroke-width="8"/>
+  <path d="M680 238c-62 116-88 238-76 365 150-16 283-73 398-170-76-94-183-159-322-195z" fill="#d9f8ff" stroke="#7fb4c6" stroke-width="7"/>
+  <path d="M913 90c165 139 298 346 400 621" fill="none" stroke="#162c38" stroke-width="38" stroke-linecap="round" opacity=".86"/>
+  <path d="M995 90c128 155 222 347 281 576" fill="none" stroke="url(#hair)" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="697" cy="335" r="88" fill="#fbfbfb" stroke="#202d35" stroke-width="10"/>
+  <path d="M647 339c74 24 141 12 201-38-24 64-70 110-135 137-40-21-62-54-66-99z" fill="#e8f9ff"/>
+  <path d="M622 460l-96 249 185 46 114-222z" fill="#202832"/>
+  <path d="M534 711l-118 122 265 12 30-91z" fill="#80d6ee" stroke="#39424c" stroke-width="8"/>
+  <path d="M834 532l222 184 102-116-226-170z" fill="#e9f8fb" stroke="#39424c" stroke-width="8"/>
+  <path d="M208 168c204 50 379 158 526 325M128 304c272 22 504 125 696 309" fill="none" stroke="#b1c4cf" stroke-width="4" opacity=".55"/>
+  <path d="M1096 86l164 59-107 113 66 158-172-54-126 114-12-169-148-91 164-44z" fill="#eef8fb" stroke="#8fa6b2" stroke-width="7" opacity=".78"/>
+</svg>

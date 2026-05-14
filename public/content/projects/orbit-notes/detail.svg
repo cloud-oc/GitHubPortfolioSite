@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" role="img" aria-label="GitHub commit flow">
+  <rect width="1000" height="520" fill="#f4f7fb"/>
+  <rect x="76" y="120" width="200" height="116" rx="14" fill="#ffffff" stroke="#9cadba" stroke-width="4"/>
+  <rect x="400" y="120" width="200" height="116" rx="14" fill="#ffffff" stroke="#9cadba" stroke-width="4"/>
+  <rect x="724" y="120" width="200" height="116" rx="14" fill="#ffffff" stroke="#9cadba" stroke-width="4"/>
+  <rect x="242" y="338" width="516" height="92" rx="14" fill="#202630"/>
+  <path d="M276 178h124M600 178h124M276 178h124" stroke="#202630" stroke-width="14" stroke-linecap="round"/>
+  <path d="M276 178h98M600 178h98" stroke="#202630" stroke-width="14" stroke-linecap="round"/>
+  <path d="M276 178h88M600 178h88" stroke="#202630" stroke-width="14" stroke-linecap="round"/>
+  <path d="M278 178h122M600 178h122" stroke="#202630" stroke-width="12" stroke-linecap="round"/>
+  <path d="M300 178h76M624 178h76" stroke="#fff" stroke-width="3"/>
+  <path d="M276 178h112M600 178h112" stroke="#202630" stroke-width="12" stroke-linecap="round"/>
+  <path d="M312 178h80M636 178h80" stroke="#fff" stroke-width="3"/>
+  <path d="M276 178h112M600 178h112" stroke="#202630" stroke-width="12" stroke-linecap="round"/>
+  <path d="M276 178h104M600 178h104" stroke="#202630" stroke-width="12" stroke-linecap="round"/>
+  <path d="M276 178h100M600 178h100" stroke="#202630" stroke-width="12" stroke-linecap="round"/>
+  <path d="M276 178h86M600 178h86" stroke="#202630" stroke-width="12" stroke-linecap="round"/>
+  <path d="M306 178h68M630 178h68" stroke="#fff" stroke-width="3"/>
+  <path d="M276 178h100M600 178h100" stroke="#202630" stroke-width="12" stroke-linecap="round"/>
+  <path d="M176 236v148h66M500 236v148M824 236v148h-66" fill="none" stroke="#7d8d9c" stroke-width="5"/>
+  <path d="M312 176h76M636 176h76" stroke="#202630" stroke-width="8" stroke-linecap="round"/>
+  <text x="176" y="188" text-anchor="middle" font-family="Arial" font-size="24" fill="#202630">表单</text>
+  <text x="500" y="188" text-anchor="middle" font-family="Arial" font-size="24" fill="#202630">Worker</text>
+  <text x="824" y="188" text-anchor="middle" font-family="Arial" font-size="24" fill="#202630">GitHub</text>
+  <text x="500" y="394" text-anchor="middle" font-family="Arial" font-size="25" fill="#fff">projects.json + images commit</text>
+</svg>
