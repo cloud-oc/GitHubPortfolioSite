@@ -1,4 +1,4 @@
-import { ArrowLeft, ChevronLeft, ChevronRight, Edit3, RotateCcw, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Edit3, RotateCcw, X } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useEffect, useMemo, useState } from "react";
 import type { Project } from "../types";
@@ -126,9 +126,6 @@ export function ProjectModal({ project, projects, isLoading, isAdmin, onClose, o
 
           <section className="postcard-face postcard-back">
             <div className="postcard-back-head">
-              <button type="button" className="ghost-icon-button" onClick={() => setIsBack(false)} aria-label="回到正面">
-                <ArrowLeft size={20} />
-              </button>
               <div>
                 <p className="postcard-kicker">{project.role}</p>
                 <h2>{project.title}</h2>
