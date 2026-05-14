@@ -1,4 +1,4 @@
-import { Grid3X3, List, LogIn, LogOut, Plus, RefreshCcw, Settings, SlidersHorizontal } from "lucide-react";
+import { LogIn, LogOut, Plus, RefreshCcw, Settings, SlidersHorizontal } from "lucide-react";
 import { Link } from "react-router-dom";
 import type { Project, ProjectsState, SessionState } from "../types";
 import { SITE_TITLE } from "../config";
@@ -14,7 +14,6 @@ type GalleryPageProps = {
 export function GalleryPage({ projectsState, sessionState, onOpenProject, overlay }: GalleryPageProps) {
   const [category, setCategory] = useState("全部分类");
   const [tag, setTag] = useState("全部标签");
-  const [compact, setCompact] = useState(false);
 
   const categories = useMemo(
     () => ["全部分类", ...Array.from(new Set(projectsState.projects.map((project) => project.category))).sort()],
@@ -40,17 +39,6 @@ export function GalleryPage({ projectsState, sessionState, onOpenProject, overla
         </div>
 
         <div className="toolbar-actions toolbar-actions-left">
-          <button className="tool-button is-active" type="button" aria-label="网格视图">
-            <Grid3X3 size={23} />
-          </button>
-          <button
-            className="tool-button"
-            type="button"
-            aria-label={compact ? "宽松网格" : "紧凑网格"}
-            onClick={() => setCompact((value) => !value)}
-          >
-            <List size={24} />
-          </button>
           <label className="select-control">
             <SlidersHorizontal size={17} />
             <select value={category} onChange={(event) => setCategory(event.target.value)}>
@@ -92,7 +80,7 @@ export function GalleryPage({ projectsState, sessionState, onOpenProject, overla
         </div>
       </header>
 
-      <section className={`gallery-grid ${compact ? "is-compact" : ""}`} aria-live="polite">
+      <section className="gallery-grid" aria-live="polite">
         {projectsState.status === "loading" && <p className="state-text">作品载入中...</p>}
         {projectsState.status === "error" && <p className="state-text state-text-error">{projectsState.error}</p>}
         {projectsState.status === "ready" && filteredProjects.length === 0 && <p className="state-text">没有匹配的作品。</p>}
@@ -111,9 +99,10 @@ function ProjectTile({ project, onOpen }: { project: Project; onOpen: () => void
       <span className="project-tile-media">
         <img src={project.coverImage} alt="" loading="lazy" />
       </span>
+      <span className="project-tile-category">{project.category}</span>
       <span className="project-tile-meta">
         <strong>{project.title}</strong>
-        <small>{project.category} / {project.year}</small>
+        <small>{project.role} / {project.year}</small>
       </span>
     </button>
   );
